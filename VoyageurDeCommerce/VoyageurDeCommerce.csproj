@@ -85,6 +85,7 @@
     <Compile Include="modele\algorithmes\realisations\AlgoInsertionProche.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoMeilleurePermutation.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoProcheVoisin.cs" />
+    <Compile Include="modele\algorithmes\realisations\AlgoRecuitSimule.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgorithmeCroissant.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgorithmeRecherche.cs" />
     <Compile Include="modele\algorithmes\realisations\DeuxOpt.cs" />

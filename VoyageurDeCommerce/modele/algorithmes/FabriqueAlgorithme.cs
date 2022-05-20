@@ -25,6 +25,7 @@ namespace VoyageurDeCommerce.modele.algorithmes
                 case TypeAlgorithme.INSERTIONLOIN: algo = new AlgoInsertionLoin(); break;
                 case TypeAlgorithme.INSERTIONPROCHE: algo = new AlgoInsertionProche(); break;
                 case TypeAlgorithme.MEILLEUREPERMUTATION: algo = new AlgoMeilleurePermutation(); break;
+                case TypeAlgorithme.RECUITSIMULE: algo = new AlgoRecuitSimule(); break;
                 case TypeAlgorithme.DEUXOPT: algo = new DeuxOpt(); break;
 
                 default: throw new ExceptionAlgorithme("Vous n'avez pas modifié la fabrique des algorithmes !");

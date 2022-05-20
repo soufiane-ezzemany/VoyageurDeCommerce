@@ -9,6 +9,7 @@
         INSERTIONLOIN,
         INSERTIONPROCHE,
         MEILLEUREPERMUTATION,
+        RECUITSIMULE,
         DEUXOPT
     }
 }
