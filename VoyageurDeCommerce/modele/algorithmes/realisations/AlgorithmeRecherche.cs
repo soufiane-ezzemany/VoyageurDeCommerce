@@ -16,6 +16,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
         public override string Nom => "Recherche Locale";
         public override void Executer(List<Lieu> listeLieux, List<Route> listeRoute)
         {
+            
             tempsExe.Start();
             //On part de la tournée obtenue avec l'algorithme du plus proche voisin
             Algorithme tourneeBase = new AlgoProcheVoisin();
@@ -71,7 +72,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
             
             this.TempsExecution = tempsExe.ElapsedMilliseconds;
             tempsExe.Stop();
-
+            tempsExe.Reset();
         }
     }
 }

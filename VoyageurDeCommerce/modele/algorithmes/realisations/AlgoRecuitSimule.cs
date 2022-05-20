@@ -88,7 +88,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
 
             this.TempsExecution = tempsExe.ElapsedMilliseconds;
             tempsExe.Stop();
-            
+            tempsExe.Reset();
 
         }
 

@@ -61,6 +61,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
 
             this.TempsExecution = tempsExe.ElapsedMilliseconds;
             tempsExe.Stop();
+            tempsExe.Reset();
         }
 
         //Inverser les lieux en utilisant la mainere de 2-opt

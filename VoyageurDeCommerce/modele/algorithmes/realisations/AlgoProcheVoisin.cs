@@ -56,6 +56,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
             }
             tempsExe.Stop();
             this.TempsExecution = tempsExe.ElapsedMilliseconds;
+            tempsExe.Reset();
         }
     }
 }
