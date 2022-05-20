@@ -152,7 +152,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
 
             sw.Stop();
             this.TempsExecution = sw.ElapsedMilliseconds;
-
+            sw.Reset();
         }
     }
 }
