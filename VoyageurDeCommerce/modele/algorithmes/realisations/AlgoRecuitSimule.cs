@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,8 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
 {
     class AlgoRecuitSimule : Algorithme
     {
+        private Stopwatch tempsExe = new Stopwatch();
+
         public override string Nom => "Recuit Simulé";
 
         private Random rnd = new Random();
@@ -17,6 +20,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
 
         public override void Executer(List<Lieu> listeLieux, List<Route> listeRoute)
         {
+            tempsExe.Start();
             FloydWarshall.calculerDistances(listeLieux, listeRoute);
 
             //Creation tourné base 
@@ -73,8 +77,18 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
 
             }
 
-            this.Tournee.ListeLieux = tourBest;
-            this.NotifyPropertyChanged("Tournee");
+            //Construction de la tournee
+            foreach (Lieu lieu in tourBest)
+            {
+                this.Tournee.Add(lieu);
+                tempsExe.Stop();
+                this.NotifyPropertyChanged("Tournee");
+                tempsExe.Start();
+            }
+
+            this.TempsExecution = tempsExe.ElapsedMilliseconds;
+            tempsExe.Stop();
+            
 
         }
 
