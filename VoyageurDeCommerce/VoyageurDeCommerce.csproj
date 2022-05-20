@@ -165,6 +165,12 @@
     <Content Include="ressources\Graphe5.gph">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ressources\Kitell.gph">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ressources\Errera.gph">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="vue\ressources\images\icon.ico" />
     <Resource Include="vue\ressources\images\truck.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
