@@ -28,6 +28,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
             List<Lieu> listeTournee = new List<Lieu>(listeLieux);
             int n = listeLieux.Count;
 
+            // tant que y a pas d'ameliorations 
             while (!amelioration)
             {
                 int delta = 0;
@@ -37,13 +38,15 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
                     for (int j = i + 2; j < n; j++)
                     {
                         for (int k = j + 2; k < n + 1; k++)
-                        {
+                        {   
+                            //Calculer delta 
                             delta += reverse_segment_if_better(ref listeTournee, i,j,k);
                         }
                     }
                         
                 }
 
+                //Prendre en consideration la tournee et refaire le while
                 if(delta < 0)
                 {
                     this.Tournee.ListeLieux = listeTournee;
@@ -70,8 +73,10 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
             tempsExe.Reset();
         }
 
+        //Fonction cherhce a ameliorer une tourné pour trouver une distance plus petite
         private int reverse_segment_if_better(ref List<Lieu> tour, int i, int j, int k)
-        {
+        {   
+            //initialisations des lieux
             Lieu A = tour[i - 1];
             Lieu B = tour[i];
             Lieu C = tour[j - 1];
@@ -79,6 +84,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
             Lieu E = tour[k - 1];
             Lieu F = tour[k % tour.Count];
 
+            // Initalisation des distances entre les lieux des indexes
             int d0 = (FloydWarshall.Distance(A,B) + FloydWarshall.Distance(C,D) + FloydWarshall.Distance(E,F));
             int d1 = (FloydWarshall.Distance(A,C) + FloydWarshall.Distance(B,D) + FloydWarshall.Distance(E,F));
             int d2 = (FloydWarshall.Distance(A,B) + FloydWarshall.Distance(C,E) + FloydWarshall.Distance(D,F));
