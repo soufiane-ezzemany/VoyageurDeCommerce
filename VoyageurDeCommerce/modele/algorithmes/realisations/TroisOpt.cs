@@ -67,6 +67,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
 
             this.TempsExecution = tempsExe.ElapsedMilliseconds;
             tempsExe.Stop();
+            tempsExe.Reset();
         }
 
         private int reverse_segment_if_better(ref List<Lieu> tour, int i, int j, int k)
