@@ -27,6 +27,7 @@ namespace VoyageurDeCommerce.modele.algorithmes
                 case TypeAlgorithme.MEILLEUREPERMUTATION: algo = new AlgoMeilleurePermutation(); break;
                 case TypeAlgorithme.RECUITSIMULE: algo = new AlgoRecuitSimule(); break;
                 case TypeAlgorithme.DEUXOPT: algo = new DeuxOpt(); break;
+                case TypeAlgorithme.TROISOPT: algo = new TroisOpt(); break;
 
                 default: throw new ExceptionAlgorithme("Vous n'avez pas modifié la fabrique des algorithmes !");
             }

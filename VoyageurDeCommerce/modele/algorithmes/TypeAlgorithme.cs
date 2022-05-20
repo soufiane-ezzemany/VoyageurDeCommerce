@@ -10,6 +10,7 @@
         INSERTIONPROCHE,
         MEILLEUREPERMUTATION,
         RECUITSIMULE,
-        DEUXOPT
+        DEUXOPT,
+        TROISOPT
     }
 }
